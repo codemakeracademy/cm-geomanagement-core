@@ -22,4 +22,12 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=TestResults/
+    - uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+        files: ./tests/CM.GeoManagementCore.WebApp.Tests/TestResults/coverage.opencover.xml
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: true 
+        verbose: true
