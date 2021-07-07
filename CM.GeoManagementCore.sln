@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{087E425B-AEB3-49C7-8E6B-00E7EB00C46C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CM.GeoManagementCore.WebApp", "src\CM.GeoManagementCore.WebApp\CM.GeoManagementCore.WebApp.csproj", "{45119052-B311-44DC-B234-9A47A4838E92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8B5E49CF-97F6-4AC1-8DE8-DCA5FCF988D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CM.GeoManagementCore.WebApp.Tests", "tests\CM.GeoManagementCore.WebApp.Tests\CM.GeoManagementCore.WebApp.Tests.csproj", "{1ED67639-D7A1-443F-9A1D-3958E23D6C2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CM.GeoManagementCore.Data", "src\CM.GeoManagementCore.Data\CM.GeoManagementCore.Data.csproj", "{00EF8ADC-3E46-4778-8C6A-1165729320EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CM.GeoManagementCore", "src\CM.GeoManagementCore\CM.GeoManagementCore.csproj", "{BCFE34D2-FD40-45B8-9223-8BA0FB7FB125}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45119052-B311-44DC-B234-9A47A4838E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45119052-B311-44DC-B234-9A47A4838E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45119052-B311-44DC-B234-9A47A4838E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45119052-B311-44DC-B234-9A47A4838E92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ED67639-D7A1-443F-9A1D-3958E23D6C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED67639-D7A1-443F-9A1D-3958E23D6C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED67639-D7A1-443F-9A1D-3958E23D6C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED67639-D7A1-443F-9A1D-3958E23D6C2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00EF8ADC-3E46-4778-8C6A-1165729320EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00EF8ADC-3E46-4778-8C6A-1165729320EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00EF8ADC-3E46-4778-8C6A-1165729320EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00EF8ADC-3E46-4778-8C6A-1165729320EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCFE34D2-FD40-45B8-9223-8BA0FB7FB125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCFE34D2-FD40-45B8-9223-8BA0FB7FB125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCFE34D2-FD40-45B8-9223-8BA0FB7FB125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCFE34D2-FD40-45B8-9223-8BA0FB7FB125}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{45119052-B311-44DC-B234-9A47A4838E92} = {087E425B-AEB3-49C7-8E6B-00E7EB00C46C}
+		{1ED67639-D7A1-443F-9A1D-3958E23D6C2B} = {8B5E49CF-97F6-4AC1-8DE8-DCA5FCF988D3}
+		{00EF8ADC-3E46-4778-8C6A-1165729320EE} = {087E425B-AEB3-49C7-8E6B-00E7EB00C46C}
+		{BCFE34D2-FD40-45B8-9223-8BA0FB7FB125} = {087E425B-AEB3-49C7-8E6B-00E7EB00C46C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3288CD5C-A987-4837-9D89-08EFBBFE1074}
+	EndGlobalSection
+EndGlobal

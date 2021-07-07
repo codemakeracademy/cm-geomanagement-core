@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>e6eda5dd-5a21-4233-b0a2-6e7b5285a727</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CM.GeoManagementCore\CM.GeoManagementCore.csproj" />
+    <ProjectReference Include="..\CM.GeoManagementCore.Data\CM.GeoManagementCore.Data.csproj" />
+    <ProjectReference Include="..\CM.GeoManagementCore\CM.GeoManagementCore.csproj" />
+  </ItemGroup>
+
+</Project>
