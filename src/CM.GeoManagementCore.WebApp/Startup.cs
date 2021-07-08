@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CM.GeoManagementCore.Data;
 using CM.GeoManagementCore.Repositories;
+using CM.GeoManagementCore.WebApp.Filters;
 
 namespace CM.GeoManagementCore.WebApp
 {
@@ -31,7 +32,10 @@ namespace CM.GeoManagementCore.WebApp
             services.AddTransient<ICountryRepository, EFCountryRepository>();
 
             services.AddLogging();
-            services.AddControllers();
+            services.AddControllers((options) =>
+            {
+                options.Filters.Add(new ExceptionFilter());
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -46,7 +50,7 @@ namespace CM.GeoManagementCore.WebApp
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+              //  app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CM.GeoManagementCore.WebApp v1"));
             }

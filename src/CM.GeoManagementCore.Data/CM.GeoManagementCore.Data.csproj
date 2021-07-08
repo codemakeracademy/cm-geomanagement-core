@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CM.GeoManagementCore\CM.GeoManagementCore.csproj" />
     <ProjectReference Include="..\CM.GeoManagementCore\CM.GeoManagementCore.csproj" />
   </ItemGroup>
 

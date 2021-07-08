@@ -13,9 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CM.GeoManagementCore\CM.GeoManagementCore.csproj" />
     <ProjectReference Include="..\CM.GeoManagementCore.Data\CM.GeoManagementCore.Data.csproj" />
     <ProjectReference Include="..\CM.GeoManagementCore\CM.GeoManagementCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
   </ItemGroup>
 
 </Project>

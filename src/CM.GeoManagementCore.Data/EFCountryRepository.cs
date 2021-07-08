@@ -25,7 +25,10 @@ namespace CM.GeoManagementCore.Data
 
         public void Delete(string countryCode)
         {
-            throw new NotImplementedException();
+           // get country
+           throw new NotFoundException($"Country with code {countryCode} does not exist");
+           
+           // delete country
         }
 
         public List<Country> GetAll()
