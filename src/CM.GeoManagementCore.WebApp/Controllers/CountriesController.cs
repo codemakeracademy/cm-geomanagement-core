@@ -12,7 +12,6 @@ using CM.GeoManagementCore.WebApp.Models;
 namespace CM.GeoManagementCore.WebApp.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
     public class CountriesController : ControllerBase
     {
         private readonly ICountryRepository _countryRepository;
@@ -26,7 +25,9 @@ namespace CM.GeoManagementCore.WebApp.Controllers
         [HttpGet]
         public ActionResult Get()
         {
-            return Ok(_countryRepository.GetAll());
+            var list = _countryRepository.GetAll();
+
+            return Ok(list);
         }
 
         // GET api/<CountriesController>/5
@@ -39,23 +40,25 @@ namespace CM.GeoManagementCore.WebApp.Controllers
         
         // POST api/<CountriesController>
         [HttpPost]
-        public ActionResult Post([FromBody] string value)
+        public IActionResult Post([FromBody] Country value)
         {
-            throw new Exception("Server Error");
+            return Ok();
         }
 
         // PUT api/<CountriesController>/5
-        [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] string value)
+        [HttpPut("{countryCode}")]
+        public ActionResult Put(string countryCode, [FromBody] Country country)
         {
-            throw new NotFoundException($"Country with id {id} was not found");
+            _countryRepository.Update(country);
+
+            return NoContent();
         }
 
         // DELETE api/<CountriesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(string id)
+        [HttpDelete("{countryCode}")]
+        public void Delete(string countryCode)
         {
-            _countryRepository.Delete(id);
+            _countryRepository.Delete(countryCode);
         }
     }
 }

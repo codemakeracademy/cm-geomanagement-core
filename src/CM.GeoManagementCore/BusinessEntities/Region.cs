@@ -8,5 +8,10 @@ namespace CM.GeoManagementCore.BusinessEntities
         public string CountryCode { get; set; }
 
         public string RegionName { get; set; }
+
+        public Region Clone()
+        {
+            return (Region) MemberwiseClone();
+        }
     }
 }

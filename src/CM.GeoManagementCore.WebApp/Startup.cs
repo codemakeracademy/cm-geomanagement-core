@@ -35,6 +35,7 @@ namespace CM.GeoManagementCore.WebApp
             services.AddControllers((options) =>
             {
                 options.Filters.Add(new ExceptionFilter());
+                options.Filters.Add(new ValidationFilter());
             });
             services.AddSwaggerGen(c =>
             {
